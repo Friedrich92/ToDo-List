@@ -1,0 +1,191 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Roboto, sans-serif;
+	background-color: #151515;
+}
+
+.header{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	background-color: #FF8000;
+}
+
+.headline{
+	font-size: 48px;
+	color: #fff;
+	padding-top: 20px;
+}
+
+.main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	padding: 20px;
+	width: 60%;
+	background-color: #848484;
+}
+
+.form{
+	width: 100%;
+	height: 60px;
+	background-color: #FF8000 ;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.span_text{
+	font-size: 18px;
+	color: #fff;
+}	
+
+.input{
+	width: 425px;
+	height: 25px;
+	border: 0;
+	padding-left: 5px;
+}
+
+.button{
+	cursor: pointer;
+	background-color: #151515;
+	width: 85px;
+	height: 25px;
+	border: 0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	transition: all .2s ease;
+}
+
+.button:hover{
+	color: #151515;
+	background-color: transparent;
+	border: 1px solid #151515;
+}
+
+.myList{
+	margin-top: 10px;
+}
+
+.myList li{
+	list-style-type: none;
+	width: 80%;
+	float: left;
+	padding: 10px 0 10px 37px;
+	position: relative;
+	margin: 15px;
+	background-color: #D8D8D8;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+
+.myList li.checked{
+	text-decoration: line-through;
+	color: #fff;
+	background-color: #151515;
+}
+
+.myList li.checked::before{
+	content: '';
+	position: absolute;	
+	border-color: #fff;	
+	border-style: solid;	
+	border-width: 0 2px 2px 0;	
+	top: 10px;	
+	left: 16px;	
+	transform: rotate(45deg);	
+	height: 15px;	
+	width: 7px;
+}
+
+.myList li:hover{
+	color: #fff;
+	background-color: #151515;
+}
+
+.myList::after {
+	content: "";
+	clear: both;
+}
+
+.span_close{
+	float: right;
+	display: inline-block;
+	position: relative;
+	right: 65px;
+	margin-top: 23px;
+	margin-right: auto; 
+	color: #fff;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+
+
+
+
+@media all and (max-width: 1100px){
+	.form{
+		display: block;
+		text-align: center;
+		position: relative;
+		height: 85px;
+	}
+
+	.span_text{
+		display: block;
+	}
+
+	.button{
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 55px;
+		margin: 0 auto;
+	}
+
+	.span_close{
+		right: 70px;
+	}
+}
+
+@media all and (max-width: 800px){
+	.container{
+		width: 100%;
+	}
+
+	.span_close{
+		right: 80px;
+	}
+}
+
+@media all and (max-width: 480px){
+	.input{
+		width: 355px;
+	}
+
+	.span_close{
+		right: 40px;
+	}
+}
+
+@media all and (max-width: 400px){
+	.input{
+		width: 255px;
+	}
+
+	.span_close{
+		right: 20px;
+	}
+}
